@@ -6,8 +6,8 @@ RUN wget https://github.com/adnanh/webhook/releases/download/2.6.5/webhook-linux
 RUN tar xzvf webhook-linux-amd64.tar.gz
 RUN mv /webhook-linux-amd64/webhook /usr/local/bin/
 RUN mkdir /var/webhook
-RUN mkdir /site
-RUN mkdir /docs
+RUN mkdir -p /srv_root/docs
+RUN mkdir /srv_root/wiki
 ADD update.sh /usr/local/bin/update.sh
 ADD hooks.json /usr/local/bin/hooks.json
 ADD start.sh /usr/local/bin/start.sh

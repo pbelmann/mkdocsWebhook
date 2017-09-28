@@ -1,3 +1,4 @@
 #!/bin/sh
-webhook -hooks  /usr/local/bin/hooks.json  -verbose &
-cd /site && python -m http.server 8000 
+webhook -urlprefix "wiki/hooks" -hooks  /usr/local/bin/hooks.json  -verbose &
+update.sh
+cd /srv_root && python -m http.server 8000
