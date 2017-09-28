@@ -1,0 +1,7 @@
+[
+  {
+    "id": "update",
+    "execute-command": "update.sh",
+    "command-working-directory": "/var/webhook"
+  }
+]
