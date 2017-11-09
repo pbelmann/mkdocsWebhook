@@ -24,24 +24,4 @@ where
 
 1. Replace hooks.json in order to set the correct hook (e.g.: GitHub webhooks)
 
-2. (Optional) Define your themes in the config.yml with the *theme_dir* attribute and mount the directory in the specified path.
-
-  2.a. Update your config.yml with:
-
-~~~YAML
-site_name: "test"                         
-docs_dir: /srv_root/docs                                 
-site_dir: /srv_root/wiki
-theme_dir: /template
-~~~ 
-
-  2.b. Place your template in template direcory.
-
-
-  2.c. Run the following command:
-
-~~~BASH
-docker run -it  -v "/path/to/template/direcory:/template"    -e REPOSITORY="https://github.com/pbelmann/mkdocsTest/archive/master.tar.gz"   --net host  docs
-~~~
-
-
+2. (Optional) You can change the theme in the config yaml.
