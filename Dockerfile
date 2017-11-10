@@ -6,7 +6,7 @@ RUN wget -qO- https://github.com/adnanh/webhook/releases/download/2.6.5/webhook-
       | tar xzv --strip 1  -C  /usr/local/bin
 RUN mkdir -p /var/webhook /srv_root/docs 
 ADD update.sh /usr/local/bin/update.sh
-ADD hooks.json /usr/local/bin/hooks.json
+COPY config/hooks.json /usr/local/bin/hooks.json
 ADD start.sh /usr/local/bin/start.sh
 RUN mkdir /var/www/html/wiki
 ENTRYPOINT "start.sh"

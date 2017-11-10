@@ -23,6 +23,14 @@ where
 
 ## Production
 
-1. Replace hooks.json in order to set the correct hook (e.g.: GitHub webhooks)
+1. Replace hooks.json in order to set the correct hook (e.g.: GitHub webhooks) with the command:
+
+~~~BASH
+docker run -it -v "$(pwd)/config:/usr/local/bin" -e REPOSITORY=REPOSITORY_URL -p "80:80" -p "9000:9000"  docs
+~~~
+
+where
+
+ * config is a folder with the **hooks.json** file.
 
 2. (Optional) You can change the theme in the config yaml.
