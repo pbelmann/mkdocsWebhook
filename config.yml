@@ -1,4 +1,4 @@
 site_name: "test"                         
 docs_dir: /srv_root/docs                                 
-site_dir: /srv_root/wiki
+site_dir: /var/www/html
 theme: bootstrap
