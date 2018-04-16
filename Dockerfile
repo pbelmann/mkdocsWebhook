@@ -1,4 +1,5 @@
 FROM python:3.5
+ENV WEBHOOK_URL_PREFIX="wiki/hooks"
 RUN apt update
 RUN apt install -y unzip apache2
 RUN python -m pip  install mkdocs==0.16.0 mkdocs-bootstrap==0.1.1
