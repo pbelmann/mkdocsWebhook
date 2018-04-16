@@ -21,15 +21,21 @@ where
 
 3. You can now open  "localhost/wiki" in your browser and send request to localhost:9000/wiki/hooks/update to update the pages
 
+### Parameters
+
+* You can modify the webhook url prefix by changing the environment variable (**WEBHOOK_URL_PREFIX**):
+
 ## Production
 
 1. Replace hooks.json in order to set the correct hook (e.g.: GitHub webhooks) with the command:
 
 ~~~BASH
-docker run -it -v "$(pwd)/config:/usr/local/bin" -e REPOSITORY=REPOSITORY_URL -p "80:80" -p "9000:9000"  docs
+docker run -it -e WEBHOOK_URL_PREFIX=<WEBHOOK_URL_PREFIX> -v "$(pwd)/config:/usr/local/bin" -e REPOSITORY=REPOSITORY_URL -p "80:80" -p "9000:9000"  docs
 ~~~
 
 where
+
+ * **WEBHOOK_URLPREFIX**: is an optional parameter to update the webhook url prefix.
 
  * config is a folder with the **hooks.json** file.
 
