@@ -12,15 +12,6 @@ node {
         app = docker.build("mkdocs")
     }
 
-    stage('Test image') {
-        /* Ideally, we would run a test framework against our image.
-         * For this example, we're using a Volkswagen-type approach ;-) */
-
-        app.inside {
-            sh 'echo "Tests passed"'
-        }
-    }
-
     stage('Deploy image') {
           sshagent ( ['0c7c9e7c-2a69-4649-8061-a1e5510f6e66']) {
        sh 'echo SSH_AUTH_SOCK=$SSH_AUTH_SOCK'
