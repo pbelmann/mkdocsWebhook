@@ -17,7 +17,7 @@ node {
        sh 'ssh -o StrictHostKeyChecking=no ubuntu@129.70.163.135 uptime'
        sh 'ssh -v ubuntu@129.70.163.135'
        sh 'ssh ubuntu@129.70.163.135 git clone git@github.com:deNBI/mkdocsWebhook.git'
-       sh 'ssh ubuntu@129.70.163.135 cd mkdocsWebhook 
+       sh 'ssh ubuntu@129.70.163.135 cd mkdocsWebhook' 
        sh 'ssh ubuntu@129.70.163.135 docker build -t docs .'
   }
     }
