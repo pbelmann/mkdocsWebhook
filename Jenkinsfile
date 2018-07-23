@@ -22,6 +22,6 @@ node {
     }
 
     stage('Deploy image') {
-   
+          sh 'echo "test"'   
     }
 }
