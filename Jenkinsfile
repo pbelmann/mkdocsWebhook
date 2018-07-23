@@ -13,8 +13,10 @@ node {
     }
 
     stage('Deploy image') {
-          sshagent ( ['0c7c9e7c-2a69-4649-8061-a1e5510f6e66']) {
-       sh 'ssh -o StrictHostKeyChecking=no -l ubuntu 129.70.163.135 uname -a'
+          sshagent (credentials : ['0c7c9e7c-2a69-4649-8061-a1e5510f6e66']) {
+       sh 'ssh -o StrictHostKeyChecking=no ubuntu@129.70.163.135 uptime'
+       sh 'ssh -v ubuntu@129.70.163.135'
+       sh 'mkdir test123'
   }
     }
 }
