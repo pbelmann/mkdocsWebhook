@@ -14,7 +14,7 @@ node {
 
     stage('Deploy image') {
           sshagent ( ['0c7c9e7c-2a69-4649-8061-a1e5510f6e66']) {
-       sh 'docker build -t docs .'
+       sh 'mkdir test123'
   }
     }
 }
