@@ -17,6 +17,7 @@ node {
        sh 'ssh -o StrictHostKeyChecking=no ubuntu@129.70.163.135 uptime'
        sh 'ssh -v ubuntu@129.70.163.135'
        sh 'mkdir test123'
+       sh 'docker build -t docs .'
   }
     }
 }
