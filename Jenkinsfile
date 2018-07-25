@@ -1,5 +1,6 @@
 node {
     def container
+    def branch
 
     stage('Clone repository') {
         checkout scm
@@ -8,7 +9,7 @@ node {
     stage('Build image') {
         /* This builds the actual image; synonymous to
          * docker build on the command line */
-        sh 'printenv'
+        branch = sh(script: 'rev=$(git name-rev --name-only HEAD)', returnStdout: true)
         container = docker.build("mkdocs")
     }
 
