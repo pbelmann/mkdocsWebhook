@@ -22,6 +22,7 @@ node {
                     customImage.push()
                 }
 }
+}
    
     stage('Deploy image') {
           sshagent (credentials : ['0c7c9e7c-2a69-4649-8061-a1e5510f6e66']) {
