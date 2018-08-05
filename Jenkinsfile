@@ -14,7 +14,7 @@ node {
 
     stage('publish'){
     script {
-                docker.withRegistry('https://registry.example.com', 'docker1') {
+                docker.withRegistry('https://registry.hub.docker.com', 'docker1') {
 
                     def customImage = docker.build("branch: test")
 
