@@ -16,7 +16,7 @@ node {
     script {
                 docker.withRegistry('https://registry.hub.docker.com', 'docker1') {
 
-                    def customImage = docker.build("branch: test")
+                    def customImage = docker.build(branch)
 
                     /* Push the container to the custom Registry */
                     customImage.push()
