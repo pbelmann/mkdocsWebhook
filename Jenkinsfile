@@ -9,7 +9,7 @@ node {
     stage('Build image') {
         /* This builds the actual image; synonymous to
          * docker build on the command line */
-        branch = sh(script: 'rev=$(git name-rev --name-only HEAD)', returnStdout: true)
+        printenv        
     }
 
     stage('publish'){
