@@ -1,22 +1,14 @@
 node {
-    def container
-    def branch
 
     stage('Clone repository') {
         checkout scm
-    }
-
-    stage('Build image') {
-        /* This builds the actual image; synonymous to
-         * docker build on the command line */
-         sh 'printenv'        
     }
 
     stage('publish'){
     script {
                 docker.withRegistry('https://registry.hub.docker.com', 'docker1') {
 
-                    def customImage = docker.build("denbicloud/mkdocswebhook}")
+                    def customImage = docker.build("denbicloud/mkdocswebhook")
 
                     /* Push the container to the custom Registry */
                     customImage.push("${env.BRANCH_NAME}")
