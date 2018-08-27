@@ -8,10 +8,10 @@ node {
     script {
                         withDockerRegistry([ credentialsId: "docker1", url: "" ]) {
 
-                    def customImage = docker.build("denbicloud/mkdocswebhook")
+                   sh 'docker build -t denbicloud/mkdocswebhook:dev .
 
                     /* Push the container to the custom Registry */
-                  customImage.push("dev")
+                  sh 'docker push denbicloud/mkdocswebhook:dev'
                 }
 }
 }
