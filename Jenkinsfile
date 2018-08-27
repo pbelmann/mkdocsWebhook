@@ -1,17 +1,18 @@
+
 node {
-    
+   
     stage('Clone repository') {
         checkout scm
     }
 
     stage('publish'){
     script {
-                        withDockerRegistry([ credentialsId: "docker1", url: "" ]) {
+                       withDockerRegistry([ credentialsId: "6544de7e-17a4-4576-9b9b-e86bc1e4f903", url: "" ]) {
 
-                   sh 'docker build -t denbicloud/mkdocswebhook:dev .'
+                    def customImage = docker.build("denbicloud/mkdocswebhook")
 
                     /* Push the container to the custom Registry */
-                  sh 'docker push denbicloud/mkdocswebhook:dev'
+                  customImage.push("dev")
                 }
 }
 }
