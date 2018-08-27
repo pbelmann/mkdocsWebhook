@@ -6,7 +6,7 @@ node {
 
     stage('publish'){
     script {
-                       withDockerRegistry([ credentialsId: "6544de7e-17a4-4576-9b9b-e86bc1e4f903", url: "" ]) {
+                       withDockerRegistry([ credentialsId: "docker1", url: "" ]) {
 
                     def customImage = docker.build("denbicloud/mkdocswebhook")
 
