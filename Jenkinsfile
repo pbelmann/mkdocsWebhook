@@ -8,7 +8,7 @@ node {
     script {
                         withDockerRegistry([ credentialsId: "docker1", url: "" ]) {
 
-                   sh 'docker build -t denbicloud/mkdocswebhook:dev .
+                   sh 'docker build -t denbicloud/mkdocswebhook:dev .'
 
                     /* Push the container to the custom Registry */
                   sh 'docker push denbicloud/mkdocswebhook:dev'
