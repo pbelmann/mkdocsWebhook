@@ -11,7 +11,7 @@ node {
                     def customImage = docker.build("denbicloud/mkdocswebhook")
 
                     /* Push the container to the custom Registry */
-                    customImage.push("feat_test_deployment")
+                    customImage.push("dev")
                 }
 }
 }
