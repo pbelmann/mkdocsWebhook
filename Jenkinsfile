@@ -6,12 +6,12 @@ node {
 
     stage('publish'){
     script {
-                docker.withRegistry('https://registry.hub.docker.com/u/denbicloud/mkdocswebhook/trigger/e3c51802-bc2a-42f7-9d46-82ef035296a1/', 'docker1') {
+                       withDockerRegistry([ credentialsId: "6544de7e-17a4-4576-9b9b-e86bc1e4f903", url: "" ]) {
 
                     def customImage = docker.build("denbicloud/mkdocswebhook")
 
                     /* Push the container to the custom Registry */
-                  
+                  customImage.push("dev")
                 }
 }
 }
