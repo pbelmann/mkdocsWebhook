@@ -2,7 +2,6 @@ node {
     def image
     stage('Clone repository') {
         checkout scm
-        sh 'ls'
     }
 
     stage('build image'){
