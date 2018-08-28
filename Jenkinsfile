@@ -10,6 +10,8 @@ node {
                     image = docker.build("denbicloud/mkdocswebhook")
         }              
     stage('push image'){
+    withDockerRegistry([ credentialsId: "docker1", url: "" ]) {
     image.push("dev")
+   }
    }              
  }
