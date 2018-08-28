@@ -1,5 +1,5 @@
 node {
-
+    def image
     stage('Clone repository') {
         checkout scm
     }
@@ -7,7 +7,7 @@ node {
     stage('build image'){
     
                     sh 'docker rmi denbicloud/mkdocswebhook'
-                    def image = docker.build("denbicloud/mkdocswebhook")
+                    image = docker.build("denbicloud/mkdocswebhook")
         }
     stage('test container'){
      image.inside{
