@@ -6,12 +6,11 @@ node {
 
     stage('build image'){
     
-                    sh 'docker rmi denbicloud/mkdocswebhook'
-                    image = docker.build("denbicloud/mkdocswebhook")
+                    sh 'docker build --no-cache denbicloud/mkdocswebhook .'
         }              
     stage('push image'){
     withDockerRegistry([ credentialsId: "docker1", url: "" ]) {
-    image.push("dev")
+    sh 'docker push denbicloud/mkdocswebhook:dev'
    }
    }              
  }
