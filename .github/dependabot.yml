@@ -4,13 +4,18 @@ updates:
   directory: "/"
   schedule:
     interval: weekly
+    reviewers:
+    - "dweinholz"
+    - "tensulin"
+    - "eKatchko"
+    - "vktrrdk"
   open-pull-requests-limit: 10
-  target-branch: feat/dependabot
+  target-branch: master
 - package-ecosystem: pip
   directory: "/"
   schedule:
-    interval: daily
-  default_reviewers:
+    interval: weekly
+  reviewers:
     - "dweinholz"
     - "tensulin"
     - "eKatchko"
