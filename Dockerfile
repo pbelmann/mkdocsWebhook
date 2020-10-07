@@ -1,4 +1,4 @@
-FROM python:3.8.6
+FROM python:3.9.0
 ENV WEBHOOK_URL_PREFIX="wiki/hooks"
 ADD requirements.txt .
 RUN apt update
