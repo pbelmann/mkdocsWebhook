@@ -3,12 +3,16 @@ updates:
 - package-ecosystem: docker
   directory: "/"
   schedule:
-    interval: daily
+    interval: weekly
   open-pull-requests-limit: 10
   target-branch: feat/dependabot
 - package-ecosystem: pip
   directory: "/"
   schedule:
     interval: daily
+  default_reviewers:
+  	- dweinholz
+  	- tensulin
+  	- eKatchko 
   open-pull-requests-limit: 10
-  target-branch: feat/dependabot
+  target-branch: master
