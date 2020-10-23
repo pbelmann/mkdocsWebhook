@@ -17,7 +17,7 @@ jobs:
       env:
         REPOSITORY: https://github.com/deNBI/cloud-user-docs/archive/master.tar.gz
       with:
-        name: denbicloud/mkdocsWebhook
+        name: denbicloud/mkdocswebhook
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
         dockerfile: Dockerfile
