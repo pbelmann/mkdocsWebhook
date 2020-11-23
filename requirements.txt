@@ -1,5 +1,5 @@
 mkdocs==1.1.2
-mkdocs-material==6.1.5
+mkdocs-material==6.1.6
 pygments
 pymdown-extensions
 mkdocs-pdf-export-plugin==0.5.8
