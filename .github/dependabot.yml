@@ -5,10 +5,8 @@ updates:
   schedule:
     interval: weekly
   reviewers:
-    - "dweinholz"
-    - "tensulin"
-    - "eKatchko"
-    - "vktrrdk"
+    - "deNBI/portal-dev"
+
   open-pull-requests-limit: 10
   target-branch: master
 - package-ecosystem: pip
@@ -16,9 +14,7 @@ updates:
   schedule:
     interval: weekly
   reviewers:
-    - "dweinholz"
-    - "tensulin"
-    - "eKatchko"
-    - "vktrrdk"
+    - "deNBI/portal-dev"
+
   open-pull-requests-limit: 10
   target-branch: master
