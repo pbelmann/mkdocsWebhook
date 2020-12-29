@@ -5,16 +5,22 @@ updates:
   schedule:
     interval: weekly
   reviewers:
-    - "deNBI/portal-dev"
-
-  open-pull-requests-limit: 10
+      - "deNBI/portal-dev"
+  commit-message:
+      prefix: "feat"
+      include: "scope"
+  open-pull-requests-limit: 15
   target-branch: master
+  
+  
 - package-ecosystem: pip
   directory: "/"
   schedule:
     interval: weekly
   reviewers:
-    - "deNBI/portal-dev"
-
-  open-pull-requests-limit: 10
+     - "deNBI/portal-dev"
+  commit-message:
+      prefix: "feat"
+      include: "scope"
+  open-pull-requests-limit: 15
   target-branch: master
