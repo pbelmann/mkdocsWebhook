@@ -9,6 +9,7 @@ RUN wget -qO- https://github.com/adnanh/webhook/releases/download/2.6.5/webhook-
 RUN mkdir -p /var/webhook /srv_root/docs 
 ADD update.sh /usr/local/bin/update.sh
 COPY config/hooks.json /usr/local/bin/hooks.json
+COPY config/apache2.conf /etc/apache2/apache2.conf
 ADD start.sh /usr/local/bin/start.sh
 RUN mkdir /var/www/html/wiki
 ENTRYPOINT "start.sh"
