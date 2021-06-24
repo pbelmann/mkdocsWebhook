@@ -40,3 +40,10 @@ where
  * config is a folder with the **hooks.json** file.
 
 2. (Optional) You can change the theme in the config yaml.
+
+You can use the SITE_URL environment variable to set a specific URL if you want to override the default of the mkdocs configuration.
+To do this, specify another variable in the command above:
+
+~~~BASH
+ -e SITE_URL=SITE_URL
+~~~
